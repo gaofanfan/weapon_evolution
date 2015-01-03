@@ -1,5 +1,4 @@
 function PlayerPk(solider, player) {
-
   this.solider = solider;
   this.player = player;
 }
@@ -33,7 +32,7 @@ PlayerPk.prototype.pk = function () {
       result += this.solider.name + 'OUT!';
       break;
     }
-
+    
   }
   return result;
 };

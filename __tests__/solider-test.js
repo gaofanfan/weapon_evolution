@@ -16,7 +16,7 @@ describe('Solider', function() {
   });
 
   describe('#getSoliderOccupation', function() {
-    it('it should return soliderOccupation', function() {
+    it('should return soliderOccupation', function() {
 
       var result = solider.getSoliderOccupation();
       expect(result).toBe('战士');
@@ -24,7 +24,7 @@ describe('Solider', function() {
   });
 
   describe('#getSoliderName', function() {
-    it('it should return soliderName', function() {
+    it('should return soliderName', function() {
 
       var result = solider.getSoliderName();
       expect(result).toBe('张三');
@@ -32,7 +32,7 @@ describe('Solider', function() {
   });
 
   describe('#getSoliderHp', function() {
-    it('it should return soliderHP', function() {
+    it('should return soliderHP', function() {
 
       var result = solider.getSoliderHp();
       expect(result).toBe(50);
@@ -40,7 +40,7 @@ describe('Solider', function() {
   });
 
   describe('#getSoliderAttack', function() {
-    it('it should return soliderAttack', function() {
+    it('should return soliderAttack', function() {
 
       var result = solider.getSoliderAttack();
       expect(result).toBe(10);
@@ -48,7 +48,7 @@ describe('Solider', function() {
   });
 
   describe('#getArmorName', function() {
-    it('it should return ArmorName', function() {
+    it('should return ArmorName', function() {
 
       var result = solider.getArmorName();
       expect(result).toBe('护盾');
@@ -56,7 +56,7 @@ describe('Solider', function() {
   });
 
   describe('#getArmorDef', function() {
-    it('it should return ArmorDef', function() {
+    it('should return ArmorDef', function() {
 
       var result = solider.getArmorDef();
       expect(result).toBe(5);
@@ -64,7 +64,7 @@ describe('Solider', function() {
   });
 
   describe('#getWeaponName', function() {
-    it('it should return WeaponName', function() {
+    it('should return WeaponName', function() {
 
       var result = solider.getWeaponName();
       expect(result).toBe('尚方宝剑');
@@ -72,11 +72,11 @@ describe('Solider', function() {
   });
 
   describe('#getWeaponAttack', function() {
-    it('it should return WeaponAttack', function() {
+    it('should return WeaponAttack', function() {
 
       var result = solider.getWeaponAttack();
       expect(result).toBe(4);
     });
   });
-  
+
 });
