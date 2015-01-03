@@ -13,18 +13,12 @@ describe('PlayerPk', function() {
   beforeEach(function() {
     armor = new Armor('护盾', 5);
     weapon = new Weapon('尚方宝剑', 4);
-    solider = new Solider('战士' ,'张三' , 50 , 10, armor, weapon);
-    player = new Player('普通人', '李四' , 40, 8);
+    solider = new Solider('战士', '张三', 50, 10, armor, weapon);
+    player = new Player('普通人', '李四', 40, 8);
   });
 
   describe('#pk()', function() {
-
-    it('should return value', function() {
-
-      // var armor = new Armor('护盾', 5);
-      // var weapon = new Weapon('尚方宝剑', 4);
-      //
-      // var solider = new Solider('战士', '张三' , 50 , 10, armor, weapon);
+    it('should return text', function() {
 
       var playerpk = new PlayerPk(solider, player);
       var attackResult =
@@ -39,7 +33,6 @@ describe('PlayerPk', function() {
 
       expect(result).toBe(attackResult);
     });
-
   });
 
 });
