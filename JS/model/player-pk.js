@@ -32,7 +32,7 @@ PlayerPk.prototype.pk = function () {
       result += this.solider.name + 'OUT!';
       break;
     }
-    
+
   }
   return result;
 };

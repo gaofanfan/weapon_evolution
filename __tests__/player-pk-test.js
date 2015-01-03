@@ -14,7 +14,7 @@ describe('PlayerPk', function() {
     armor = new Armor('护盾', 5);
     weapon = new Weapon('尚方宝剑', 4);
     solider = new Solider('战士', '张三', 50, 10, armor, weapon);
-    player = new Player('普通人', '李四', 40, 8);
+    player = new Player('普通人', '李四', 40, 8,'' ,'');
   });
 
   describe('#pk()', function() {

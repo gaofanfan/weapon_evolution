@@ -8,9 +8,9 @@ function WeaponEvolution() {
   var armor = new Armor('护盾', 5);
   var weapon = new Weapon('尚方宝剑', 4);
 
-  var solider = new Solider('战士', '张三' , 50 , 10, armor, weapon);
-  var player = new Player('普通人', '李四' , 40, 8);
-  var playerpk = new PlayerPk(solider , player);
+  var solider = new Solider('战士', '张三', 50 , 10, armor, weapon);
+  var player = new Player('普通人', '李四', 40, 8);
+  var playerpk = new PlayerPk(solider, player);
   console.log(playerpk.pk());
 }
 
