@@ -1,5 +1,5 @@
-function Armor(name , protectionValue) {
+function Armor(name , def) {
   this.name = name;
-  this.protectionValue = protectionValue;
+  this.def = def;
 }
 module.exports = Armor;

@@ -1,5 +1,10 @@
-jest.dontMock('../JS/model/player-pk');
-jest.dontMock('../JS/model/player');
+jest.autoMockOff();
+
+Player = require('../JS/model/player');
+Solider = require('../JS/model/solider');
+PlayerPk = require('../JS/model/player-pk');
+Armor = require('../JS/model/armor');
+Weapon = require('../JS/model/weapon');
 
 describe('PlayerPk', function() {
 
@@ -7,29 +12,20 @@ describe('PlayerPk', function() {
 
     it('should return value', function() {
 
-      var Player = require('../JS/model/player');
-      var PlayerPk = require('../JS/model/player-pk');
-      var player1 = new Player('张三' , 100 , 10);
-      var player2 = new Player('李四' , 80 , 8);
-      var playerpk = new PlayerPk(player1 , player2);
+
+      var armor = new Armor('护盾', 5);
+      var weapon = new Weapon('尚方宝剑', 4);
+
+      var solider = new Solider('战士', '张三' , 50 , 10, armor, weapon);
+      var player = new Player('普通人', '李四' , 40, 8);
+      var playerpk = new PlayerPk(solider, player);
       var attackResult =
-        '李四攻击了张三,张三受到10点伤害,张三的生命值还剩92\n' +
-        '张三攻击了李四,李四受到8点伤害,李四的生命值还剩70\n' +
-        '李四攻击了张三,张三受到10点伤害,张三的生命值还剩84\n' +
-        '张三攻击了李四,李四受到8点伤害,李四的生命值还剩60\n' +
-        '李四攻击了张三,张三受到10点伤害,张三的生命值还剩76\n' +
-        '张三攻击了李四,李四受到8点伤害,李四的生命值还剩50\n' +
-        '李四攻击了张三,张三受到10点伤害,张三的生命值还剩68\n' +
-        '张三攻击了李四,李四受到8点伤害,李四的生命值还剩40\n' +
-        '李四攻击了张三,张三受到10点伤害,张三的生命值还剩60\n' +
-        '张三攻击了李四,李四受到8点伤害,李四的生命值还剩30\n' +
-        '李四攻击了张三,张三受到10点伤害,张三的生命值还剩52\n' +
-        '张三攻击了李四,李四受到8点伤害,李四的生命值还剩20\n' +
-        '李四攻击了张三,张三受到10点伤害,张三的生命值还剩44\n'+
-        '张三攻击了李四,李四受到8点伤害,李四的生命值还剩10\n' +
-        '李四攻击了张三,张三受到10点伤害,张三的生命值还剩36\n' +
-        '张三攻击了李四,李四受到8点伤害,李四的生命值还剩0\n' +
-        '李四   OUT!!!';
+        '战士张三用尚方宝剑攻击了普通人李四，李四受到了14点伤害，李四的生命值还剩：26\n' +
+        '普通人李四攻击了战士张三，张三受到了3点伤害，张三的生命值还剩：47\n' +
+        '战士张三用尚方宝剑攻击了普通人李四，李四受到了14点伤害，李四的生命值还剩：12\n' +
+        '普通人李四攻击了战士张三，张三受到了3点伤害，张三的生命值还剩：44\n' +
+        '战士张三用尚方宝剑攻击了普通人李四，李四受到了14点伤害，李四的生命值还剩：-2\n' +
+        '李四OUT!';
 
       var result = playerpk.pk();
 

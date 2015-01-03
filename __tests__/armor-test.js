@@ -6,6 +6,6 @@ describe('Armor', function() {
 
     var armor = new Armor('护盾', 5);
     var result =  armor;
-    expect(result).toEqual({name:'护盾', protectionValue: 5 });
+    expect(result).toEqual({name:'护盾', def: 5 });
   });
 });
