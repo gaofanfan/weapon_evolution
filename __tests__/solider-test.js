@@ -7,9 +7,11 @@ Weapon = require('../JS/model/weapon');
 
 describe('Solider', function() {
   var solider;
+  var armor;
+  var weapon;
   beforeEach(function() {
-    var armor = new Armor('护盾', 5);
-    var weapon = new Weapon('尚方宝剑', 4);
+    armor = new Armor('护盾', 5);
+    weapon = new Weapon('尚方宝剑', 4);
     solider = new Solider('战士' ,'张三' , 50 , 10, armor, weapon);
   });
 

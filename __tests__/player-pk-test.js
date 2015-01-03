@@ -1,5 +1,4 @@
 jest.autoMockOff();
-
 Player = require('../JS/model/player');
 Solider = require('../JS/model/solider');
 PlayerPk = require('../JS/model/player-pk');
@@ -7,17 +6,26 @@ Armor = require('../JS/model/armor');
 Weapon = require('../JS/model/weapon');
 
 describe('PlayerPk', function() {
+  var solider;
+  var player;
+  var armor;
+  var weapon;
+  beforeEach(function() {
+    armor = new Armor('护盾', 5);
+    weapon = new Weapon('尚方宝剑', 4);
+    solider = new Solider('战士' ,'张三' , 50 , 10, armor, weapon);
+    player = new Player('普通人', '李四' , 40, 8);
+  });
 
   describe('#pk()', function() {
 
     it('should return value', function() {
 
+      // var armor = new Armor('护盾', 5);
+      // var weapon = new Weapon('尚方宝剑', 4);
+      //
+      // var solider = new Solider('战士', '张三' , 50 , 10, armor, weapon);
 
-      var armor = new Armor('护盾', 5);
-      var weapon = new Weapon('尚方宝剑', 4);
-
-      var solider = new Solider('战士', '张三' , 50 , 10, armor, weapon);
-      var player = new Player('普通人', '李四' , 40, 8);
       var playerpk = new PlayerPk(solider, player);
       var attackResult =
         '战士张三用尚方宝剑攻击了普通人李四，李四受到了14点伤害，李四的生命值还剩：26\n' +
