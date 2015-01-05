@@ -1,48 +1,48 @@
-jest.dontMock('../JS/model/solider');
+jest.dontMock('../JS/model/soldier');
 jest.dontMock('../JS/model/armor');
 jest.dontMock('../JS/model/weapon');
-Solider = require('../JS/model/solider');
+Soldier = require('../JS/model/soldier');
 Armor = require('../JS/model/armor');
 Weapon = require('../JS/model/weapon');
 
-describe('Solider', function() {
-  var solider;
+describe('Soldier', function() {
+  var soldier;
   var armor;
   var weapon;
   beforeEach(function() {
     armor = new Armor('护盾', 5);
     weapon = new Weapon('尚方宝剑', 4);
-    solider = new Solider('战士' ,'张三' , 50 , 10, armor, weapon);
+    soldier = new Soldier('战士' ,'张三' , 50, 10, armor, weapon);
   });
 
-  describe('#getSoliderOccupation', function() {
-    it('it should return soliderOccupation', function() {
+  describe('#getOccupation', function() {
+    it('it should return soldierOccupation', function() {
 
-      var result = solider.getSoliderOccupation();
+      var result = soldier.getOccupation();
       expect(result).toBe('战士');
     });
   });
 
-  describe('#getSoliderName', function() {
+  describe('#getName', function() {
     it('it should return soliderName', function() {
 
-      var result = solider.getSoliderName();
+      var result = soldier.getName();
       expect(result).toBe('张三');
     });
   });
 
-  describe('#getSoliderHp', function() {
-    it('it should return soliderHP', function() {
+  describe('#geHp', function() {
+    it('it should return soldierHP', function() {
 
-      var result = solider.getSoliderHp();
+      var result = soldier.getHp();
       expect(result).toBe(50);
     });
   });
 
-  describe('#getSoliderAttack', function() {
-    it('it should return soliderAttack', function() {
+  describe('#getAttack', function() {
+    it('it should return soldierAttack', function() {
 
-      var result = solider.getSoliderAttack();
+      var result = soldier.getAttack();
       expect(result).toBe(10);
     });
   });
@@ -50,7 +50,7 @@ describe('Solider', function() {
   describe('#getArmorName', function() {
     it('should return ArmorName', function() {
 
-      var result = solider.getArmorName();
+      var result = soldier.getArmorName();
       expect(result).toBe('护盾');
     });
   });
@@ -58,7 +58,7 @@ describe('Solider', function() {
   describe('#getArmorDef', function() {
     it('should return ArmorDef', function() {
 
-      var result = solider.getArmorDef();
+      var result = soldier.getArmorDef();
       expect(result).toBe(5);
     });
   });
@@ -66,7 +66,7 @@ describe('Solider', function() {
   describe('#getWeaponName', function() {
     it('should return WeaponName', function() {
 
-      var result = solider.getWeaponName();
+      var result = soldier.getWeaponName();
       expect(result).toBe('尚方宝剑');
     });
   });
@@ -74,7 +74,7 @@ describe('Solider', function() {
   describe('#getWeaponAttack', function() {
     it('should return WeaponAttack', function() {
 
-      var result = solider.getWeaponAttack();
+      var result = soldier.getWeaponAttack();
       expect(result).toBe(4);
     });
   });
